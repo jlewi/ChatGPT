@@ -14,8 +14,10 @@ from OpenAIAuth.OpenAIAuth import OpenAIAuth
 # Disable all logging
 logging.basicConfig(level=logging.ERROR)
 
-BASE_URL = environ.get("CHATGPT_BASE_URL") or "https://chat.duti.tech/"
-
+# N.B. (jeremy): I'm not sure what duti.tech is; seems like might be some sort of
+# proxy to chat.openai.com.
+# BASE_URL = environ.get("CHATGPT_BASE_URL") or "https://chat.duti.tech/"
+BASE_URL = environ.get("CHATGPT_BASE_URL") or "https://chat.openai.com/"
 
 class Error(Exception):
     """Base class for exceptions in this module."""
